@@ -248,14 +248,14 @@
       return `checklist-nonna-preparazione-${toDateInputValue(baseDate)}`;
     }
 
-    function nextTuesdayAnchor() {
-      const anchor = normalizeDate(new Date('2026-07-14T12:00:00'));
+    function dietraAnchor() {
+      return normalizeDate(new Date('2026-07-16T12:00:00'));
       return anchor;
     }
 
     function isDietraDay(date) {
-      const anchor = nextTuesdayAnchor();
-      const diff = Math.floor((date - anchor) / 86400000);
+      const anchor = dietraAnchor();
+      const diff = Math.floor((normalizeDate(new Date(date)) - anchor) / 86400000);
       return diff >= 0 && diff % 10 === 0;
     }
 
