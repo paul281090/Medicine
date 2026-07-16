@@ -278,7 +278,7 @@
     if (day === 2) breakfast.push({ name: 'METOTREXATE', dose: '4 cps', tag: 'solo martedì' });
     if (day === 2) dinner.push({ name: 'METOTREXATE', dose: '4 cps', tag: 'solo martedì' });
     if (day === 3) lunch.push({ name: 'FOLINA', dose: '2 cps', tag: 'solo mercoledì' });
-    if (isDietraDay(date)) lunch.push({ name: 'DIETRA 25.000 UI', dose: '1 cps', tag: 'ogni 10 giorni dal 16.07.2026' });
+    if (isDietraDay(date)) lunch.push({ name: 'DIETRA 25.000 UI', dose: '1 cps', tag: 'dal 16.07.2026 ogni 10 giorni' });
 
     return { early, breakfast, lunch, dinner, withOmeprazolo: isOmeprazoloDay(date), withDietra: isDietraDay(date) };
   }
